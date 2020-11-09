@@ -19,5 +19,6 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/asus/X00P-sepolicy/private
 
 BOARD_SEPOLICY_DIRS += \
     device/asus/X00P-sepolicy/vendor/asus/drm \
+    device/asus/X00P-sepolicy/vendor/asus/health \
     device/asus/X00P-sepolicy/vendor/asus/light \
     device/asus/X00P-sepolicy/vendor/asus/perf
