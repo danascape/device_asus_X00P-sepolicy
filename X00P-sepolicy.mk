@@ -23,6 +23,7 @@ BOARD_SEPOLICY_DIRS += \
 # Asus Sepolicy
 BOARD_SEPOLICY_DIRS += \
     device/asus/X00P-sepolicy/vendor/asus/drm \
+    device/asus/X00P-sepolicy/vendor/asus/fingerprint \
     device/asus/X00P-sepolicy/vendor/asus/health \
     device/asus/X00P-sepolicy/vendor/asus/light \
     device/asus/X00P-sepolicy/vendor/asus/perf

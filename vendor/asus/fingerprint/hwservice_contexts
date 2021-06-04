@@ -1,0 +1,3 @@
+# Fingerprint
+vendor.microarray.mafp::IMAFactory                                         u:object_r:hal_fingerprint_hwservice:s0                      
+vendor.sw.swfingerprint::ISwfingerprint                                    u:object_r:hal_fingerprint_hwservice:s0
