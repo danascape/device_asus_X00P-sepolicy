@@ -1,25 +1,32 @@
+# TODO(b/36644492): Remove data_between_core_and_vendor_violators once
+# hal_fingerprint no longer directly accesses fingerprintd_data_file.
+typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
+
+add_service(hal_fingerprint_default, sf_service);
+binder_call(hal_fingerprint_default, hal_perf_default)
+r_dir_file(hal_fingerprint_default, firmware_file)
+vndbinder_use(hal_fingerprint_default);
+
+# access to /data/system/users/[0-9]+/fpdata
+allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default fingerprintd_data_file:dir create_file_perms;
+allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
+
 allow hal_fingerprint_default {
     fingerprint_device
     tee_device
     uhid_device
 }:chr_file rw_file_perms;
 
-# TODO(b/36644492): Remove data_between_core_and_vendor_violators once
-# hal_fingerprint no longer directly accesses fingerprintd_data_file.
-typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
-# access to /data/system/users/[0-9]+/fpdata
-allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
-allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
-
+allow hal_fingerprint_default input_device:dir { search };
 allow hal_fingerprint_default mnt_vendor_file:dir search;
+allow hal_fingerprint_default hal_fingerprint_default:netlink_kobject_uevent_socket { create };
 allow hal_fingerprint_default persist_drm_file:dir w_dir_perms;
 allow hal_fingerprint_default persist_drm_file:file unlink;
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
+allow hal_fingerprint_default system_data_file:dir create_dir_perms;
 allow hal_fingerprint_default vfat:dir search;
 allow hal_fingerprint_default vfat:file r_file_perms;
 allow hal_fingerprint_default vndbinder_device:chr_file { open ioctl read write };
 
 allow hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
-binder_call(hal_fingerprint_default, hal_perf_default)
-
-r_dir_file(hal_fingerprint_default, firmware_file)
