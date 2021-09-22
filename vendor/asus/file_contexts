@@ -1,7 +1,3 @@
-# DRM HAL
-/vendor/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                                                  u:object_r:hal_drm_clearkey_exec:s0
-/vendor/bin/hw/android\.hardware\.drm@1\.2-service\.widevine                                                  u:object_r:hal_drm_widevine_exec:s0
-
 # Fingerprint Data Files
 /data/system/sunwave(/.*)?                                                                                    u:object_r:fingerprintd_data_file:s0
 
