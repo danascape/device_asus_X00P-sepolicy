@@ -1,0 +1,16 @@
+# DRM HAL
+/vendor/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                                                  u:object_r:hal_drm_clearkey_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.2-service\.widevine                                                  u:object_r:hal_drm_widevine_exec:s0
+
+# Fingerprint Data Files
+/data/system/sunwave(/.*)?                                                                                    u:object_r:fingerprintd_data_file:s0
+
+# Fingerprint Devices
+/dev/fpsensor                                                                                                 u:object_r:fingerprint_device:s0
+/dev/sunwave_fp                                                                                               u:object_r:fingerprint_device:s0
+
+# Light HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.X00P                                    u:object_r:hal_light_default_exec:s0
+
+# Perf HAL
+/vendor/lib64/vendor\.qti\.hardware\.perf@2\.0\.so                                                            u:object_r:same_process_hal_file:s0

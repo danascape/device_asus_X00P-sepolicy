@@ -1,6 +1,0 @@
-# Fingerprint Data Files
-/data/system/sunwave(/.*)?                                                u:object_r:fingerprintd_data_file:s0
-
-# Fingerprint Devices
-/dev/fpsensor                                                             u:object_r:fingerprint_device:s0
-/dev/sunwave_fp                                                           u:object_r:fingerprint_device:s0

@@ -17,13 +17,7 @@
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/asus/X00P-sepolicy/private
 
 # QCOM Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/asus/X00P-sepolicy/vendor/qcom/msm8937 \
+BOARD_VENDOR_SEPOLICY_DIRS += device/asus/X00P-sepolicy/vendor/qcom/msm8937
 
 # Asus Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/asus/X00P-sepolicy/vendor/asus/drm \
-    device/asus/X00P-sepolicy/vendor/asus/fingerprint \
-    device/asus/X00P-sepolicy/vendor/asus/health \
-    device/asus/X00P-sepolicy/vendor/asus/light \
-    device/asus/X00P-sepolicy/vendor/asus/perf
+BOARD_VENDOR_SEPOLICY_DIRS += device/asus/X00P-sepolicy/vendor/asus
