@@ -1,5 +1,5 @@
-allow thermal-engine sysfs:dir { read };
-allow thermal-engine sysfs_devfreq:dir { search };
+allow thermal-engine sysfs:dir { open read };
+allow thermal-engine sysfs_devfreq:dir { read search };
 
 # Allow thermal-engine to read files in /sys
 r_dir_file(thermal-engine, sysfs)
