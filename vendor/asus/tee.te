@@ -1,7 +1,7 @@
 typeattribute tee data_between_core_and_vendor_violators;
 
 # /data/sunwave labelling
-type_transition tee system_data_file:{ dir file } fingerprintd_data_file;
+type_transition tee system_data_file:{ dir file } sf_data_file;
 
 # Fingerprint
 allow tee fingerprintd_data_file:dir create_dir_perms;
@@ -9,3 +9,8 @@ allow tee fingerprintd_data_file:dir rw_dir_perms;
 allow tee fingerprintd_data_file:file create_file_perms;
 
 allow tee system_data_file:dir create_dir_perms;
+allow tee system_data_file:file { open read };
+
+allow tee sf_data_file:dir create_dir_perms;
+allow tee sf_data_file:dir rw_dir_perms;
+allow tee sf_data_file:file { create open read write unlink };

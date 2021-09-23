@@ -1,4 +1,5 @@
 # Fingerprint Data Files
+/data/system/users/[0-9]+/fpdata(/.*)?                                                                        u:object_r:sf_data_file:s0
 /data/system/sunwave(/.*)?                                                                                    u:object_r:fingerprintd_data_file:s0
 
 # Fingerprint Devices
