@@ -3,6 +3,7 @@
 
 # Fingerprint Devices
 /dev/fpsensor                                                                                                 u:object_r:fingerprint_device:s0
+/dev/madev0                                                                                                   u:object_r:fingerprint_device:s0
 /dev/sunwave_fp                                                                                               u:object_r:fingerprint_device:s0
 
 # Fingerprint HAL
