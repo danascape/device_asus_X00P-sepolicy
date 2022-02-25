@@ -1,5 +1,8 @@
 allow thermal-engine sysfs:dir { open read };
 allow thermal-engine sysfs_devfreq:dir { read search };
 
+dontaudit thermal-engine property_socket:sock_file write;
+dontaudit thermal-engine init:unix_stream_socket connectto;
+
 # Allow thermal-engine to read files in /sys
 r_dir_file(thermal-engine, sysfs)
