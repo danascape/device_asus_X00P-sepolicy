@@ -1,1 +1,5 @@
+# Fingerprint
 type fingerprint_device, dev_type;
+
+# Partitions
+typeattribute system_block_device super_block_device_type;
