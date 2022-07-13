@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/asus/X00P-sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/asus/X00P-sepolicy/private
 
 # QCOM Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += device/asus/X00P-sepolicy/vendor/qcom/common
