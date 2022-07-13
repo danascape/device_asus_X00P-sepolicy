@@ -1,2 +1,5 @@
+# Camera
+camera.                                            u:object_r:camera_prop:s0
+
 # Fingerprint
 persist.sys.fp.                                    u:object_r:vendor_fp_prop:s0
